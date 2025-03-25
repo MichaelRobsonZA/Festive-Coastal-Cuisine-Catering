@@ -1,0 +1,189 @@
+/* Custom styles for Festive Coastal Cuisine Catering */
+
+:root {
+  /* Coastal-inspired color palette - light mode defaults */
+  --primary-blue: #3494b3;
+  --light-blue: #a5d8e6;
+  --sand: #f5e1a4;
+  --coral: #ee6c4d;
+  --dark-navy: #2d3047;
+  --light-gray: #f8f9fa;
+
+  /* Theme variables */
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --navbar-bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --border-color: #dee2e6;
+  --footer-bg: #2d3047;
+}
+
+/* Dark mode colors */
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --navbar-bg: #1f1f1f;
+  --card-bg: #2d2d2d;
+  --border-color: #444444;
+  --footer-bg: #1a1a1a;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar {
+  background-color: var(--navbar-bg) !important;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--text-color);
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--text-color) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-navy);
+  border-color: var(--dark-navy);
+}
+
+/* Dark mode toggle */
+.dark-mode-toggle {
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.dark-mode-toggle i {
+  font-size: 1.2rem;
+}
+
+/* Card styling */
+.card {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card .text-muted {
+  color: var(--text-color) !important;
+  opacity: 0.8;
+}
+
+.card-title, .card-text {
+  color: var(--text-color);
+}
+
+/* Events section styling */
+.event-card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.event-icon {
+  color: var(--primary-blue);
+}
+
+/* Testimonials section */
+#testimonials {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+#testimonials h3 {
+  color: white;
+}
+
+.testimonial-carousel .card {
+  border: none;
+  background-color: var(--card-bg);
+  color: var(--text-color); /* This ensures text color changes with theme */
+}
+
+.testimonial-carousel .card-body {
+  padding: 2rem;
+}
+
+.testimonial-carousel .card p.text-muted {
+  opacity: 0.8;
+  color: var(--text-color) !important; /* Override Bootstrap's text-muted in dark mode */
+}
+
+/* Footer styling */
+footer {
+  background-color: var(--footer-bg) !important;
+}
+
+footer .social-icons a {
+  transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: var(--light-blue) !important;
+}
+
+/* Hero section overlay for better text readability */
+.hero-section {
+  position: relative;
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.event-icon i {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Featured Menus section styling */
+#featured-menus {
+  background-color: var(--light-blue);
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+#featured-menus h3 {
+  color: var(--dark-navy);
+  margin-bottom: 2rem;
+}
+
+/* Events We Cater section styling */
+#events-we-cater {
+  background-color: var(--sand);
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+#events-we-cater h3 {
+  color: var(--dark-navy);
+  margin-bottom: 2rem;
+}
