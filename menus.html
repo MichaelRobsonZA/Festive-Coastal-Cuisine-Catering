@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menus - Festive Coastal Cuisine Catering</title>
+    <meta name="description" content="Explore our diverse catering menus featuring fresh seafood, coastal-inspired dishes, and customizable options for any event.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- AOS - Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Make sure all pages have this complete navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="d-flex align-items-center">
+                    <div id="leftCoastalAnimation" class="me-2"></div>
+                    Festive Coastal Cuisine
+                    <div id="rightCoastalAnimation" class="ms-2"></div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menus.html">Menus</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <div id="darkModeToggle" class="dark-mode-toggle nav-link">
+                            <i id="moonIcon" class="fas fa-moon"></i>
+                            <i id="sunIcon" class="fas fa-sun d-none"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center; background-size: cover;">
+        <div class="container text-center text-white py-5">
+            <h1 class="display-3 fw-bold" data-aos="fade-up">Our Catering Menus</h1>
+            <p class="lead fs-4 mt-3" data-aos="fade-up" data-aos-delay="200">Delicious coastal-inspired cuisines for every occasion</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <!-- Menu Introduction -->
+        <section class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 mb-4">Exquisite Coastal Cuisine</h2>
+            <p class="lead">Our menus feature the finest seafood and locally-sourced ingredients, prepared with passion and creativity. Each dish is crafted to showcase the vibrant flavors of coastal cuisine while accommodating diverse tastes and dietary needs.</p>
+            <div class="d-flex justify-content-center gap-2 mt-4">
+                <span class="badge bg-primary p-2"><i class="fas fa-leaf me-1"></i> Vegetarian Options</span>
+                <span class="badge bg-success p-2"><i class="fas fa-seedling me-1"></i> Vegan Available</span>
+                <span class="badge bg-warning text-dark p-2"><i class="fas fa-bread-slice me-1"></i> Gluten-Free Options</span>
+                <span class="badge bg-info text-dark p-2"><i class="fas fa-fish me-1"></i> Sustainable Seafood</span>
+            </div>
+        </section>
+
+        <!-- Menu Filter Tabs -->
+        <section class="mb-5" data-aos="fade-up">
+            <div class="menu-tabs text-center mb-4">
+                <ul class="nav nav-pills justify-content-center" id="menuTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All Menus</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="seafood-tab" data-bs-toggle="pill" data-bs-target="#seafood" type="button" role="tab" aria-controls="seafood" aria-selected="false">Seafood</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="appetizers-tab" data-bs-toggle="pill" data-bs-target="#appetizers" type="button" role="tab" aria-controls="appetizers" aria-selected="false">Appetizers</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="entrees-tab" data-bs-toggle="pill" data-bs-target="#entrees" type="button" role="tab" aria-controls="entrees" aria-selected="false">Entrées</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="desserts-tab" data-bs-toggle="pill" data-bs-target="#desserts" type="button" role="tab" aria-controls="desserts" aria-selected="false">Desserts</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="beverages-tab" data-bs-toggle="pill" data-bs-target="#beverages" type="button" role="tab" aria-controls="beverages" aria-selected="false">Beverages</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Menu Content -->
+        <div class="tab-content" id="menuTabsContent">
+            <!-- All Menus Tab -->
+            <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                <!-- Seafood Elegance Premium Menu -->
+                <section id="seafood-elegance" class="py-5" data-aos="fade-up">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <img src="https://images.pexels.com/photos/566345/pexels-photo-566345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid rounded shadow" alt="Seafood Elegance Menu">
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="p-4">
+                                <h3 class="display-6 mb-3">Seafood Elegance Menu</h3>
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="badge bg-primary me-2">Premium</span>
+                                    <span class="text-muted">Starting at $65/person</span>
+                                </div>
+                                <p>A premium selection of fresh seafood including lobster, crab, oysters, and grilled fish served with seasonal vegetables and artisan breads.</p>
+                                <button class="btn btn-outline-primary mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#seafoodEleganceItems" aria-expanded="false" aria-controls="seafoodEleganceItems">
+                                    View Menu Items <i class="fas fa-chevron-down ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Collapsible Menu Items -->
+                    <div class="collapse mt-4" id="seafoodEleganceItems">
+                        <div class="card card-body">
+                            <h4 class="mb-4">Menu Details</h4>
+                            
+                            <h5>Appetizers (Choose Three)</h5>
+                            <ul class="mb-4">
+                                <li>Fresh Oysters with Mignonette Sauce <span class="badge bg-info text-dark">Sustainable</span></li>
+                                <li>Lobster Bisque Shooters</li>
+                                <li>Crab-Stuffed Mushrooms</li>
+                                <li>Shrimp Cocktail with House-Made Sauce</li>
+                                <li>Ahi Tuna Tartare on Crisp Wonton</li>
+                                <li>Smoked Salmon Canapés with Dill Cream</li>
+                                <li>Vegetable Spring Rolls with Sweet Chili Sauce <span class="badge bg-primary">Vegetarian</span></li>
+                            </ul>
+                            
+                            <h5>Entrées (Choose Two)</h5>
+                            <ul class="mb-4">
+                                <li>Grilled Maine Lobster Tail with Drawn Butter</li>
+                                <li>Pan-Seared Scallops with Lemon Beurre Blanc</li>
+                                <li>Herb-Crusted Rack of Lamb with Mint Jus</li>
+                                <li>Grilled Filet Mignon with Red Wine Reduction</li>
+                                <li>Roasted Halibut with Champagne Sauce <span class="badge bg-info text-dark">Sustainable</span></li>
+                                <li>Wild Mushroom Risotto <span class="badge bg-primary">Vegetarian</span> <span class="badge bg-warning text-dark">GF</span></li>
+                            </ul>
+                            
+                            <h5>Sides (Choose Three)</h5>
+                            <ul class="mb-4">
+                                <li>Roasted Seasonal Vegetables <span class="badge bg-primary">Vegetarian</span> <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Truffle Mashed Potatoes <span class="badge bg-primary">Vegetarian</span> <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Wild Rice Pilaf <span class="badge bg-primary">Vegetarian</span></li>
+                                <li>Asparagus with Hollandaise <span class="badge bg-primary">Vegetarian</span> <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Garlic Butter Green Beans <span class="badge bg-primary">Vegetarian</span> <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Artisan Bread Basket with Herb Butter <span class="badge bg-primary">Vegetarian</span></li>
+                            </ul>
+                            
+                            <h5>Desserts (Choose Two)</h5>
+                            <ul>
+                                <li>Key Lime Tart with Raspberry Coulis</li>
+                                <li>Dark Chocolate Mousse <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Crème Brûlée with Fresh Berries <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>New York Cheesecake with Seasonal Fruit Compote</li>
+                                <li>Assorted Petit Fours</li>
+                            </ul>
+                            
+                            <div class="mt-4">
+                                <p><small>All menus include coffee, tea, and water service. Bar service available at additional cost.</small></p>
+                                <p><small>Menu items may vary based on seasonal availability. Minimum 20 guests required.</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Coastal Celebration Menu -->
+                <section id="coastal-celebration" class="py-5" data-aos="fade-up">
+                    <div class="row align-items-center flex-row-reverse">
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid rounded shadow" alt="Coastal Celebration Menu">
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="p-4">
+                                <h3 class="display-6 mb-3">Coastal Celebration Menu</h3>
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="badge bg-success me-2">Popular</span>
+                                    <span class="text-muted">Starting at $48/person</span>
+                                </div>
+                                <p>A balanced selection of seafood and land options, perfect for events with diverse preferences. Features local fish, grilled meats, and vibrant sides inspired by coastal regions.</p>
+                                <button class="btn btn-outline-primary mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#coastalCelebrationItems" aria-expanded="false" aria-controls="coastalCelebrationItems">
+                                    View Menu Items <i class="fas fa-chevron-down ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Collapsible Menu Items -->
+                    <div class="collapse mt-4" id="coastalCelebrationItems">
+                        <div class="card card-body">
+                            <h4 class="mb-4">Menu Details</h4>
+                            
+                            <h5>Appetizers (Choose Three)</h5>
+                            <ul class="mb-4">
+                                <li>Mini Crab Cakes with Remoulade</li>
+                                <li>Coconut Shrimp with Mango Dipping Sauce</li>
+                                <li>Mediterranean Bruschetta <span class="badge bg-primary">Vegetarian</span></li>
+                                <li>Chicken Satay with Peanut Sauce</li>
+                                <li>Stuffed Mushrooms <span class="badge bg-primary">Vegetarian</span> <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Bacon-Wrapped Scallops <span class="badge bg-warning text-dark">GF</span></li>
+                            </ul>
+                            
+                            <h5>Entrées (Choose Two)</h5>
+                            <ul class="mb-4">
+                                <li>Grilled Salmon with Citrus Glaze <span class="badge bg-info text-dark">Sustainable</span></li>
+                                <li>Chicken Piccata with Lemon Caper Sauce</li>
+                                <li>Herb-Roasted Pork Loin with Apple Chutney <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Seafood Paella with Shrimp, Mussels, and Chorizo</li>
+                                <li>Eggplant Parmesan <span class="badge bg-primary">Vegetarian</span></li>
+                            </ul>
+                            
+                            <h5>Sides (Choose Three)</h5>
+                            <ul class="mb-4">
+                                <li>Roasted Garlic Mashed Potatoes <span class="badge bg-primary">Vegetarian</span> <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Seasonal Vegetable Medley <span class="badge bg-primary">Vegetarian</span> <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Garden Salad with Assorted Dressings <span class="badge bg-primary">Vegetarian</span> <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Mediterranean Orzo Pasta Salad <span class="badge bg-primary">Vegetarian</span></li>
+                                <li>Dinner Rolls with Whipped Butter <span class="badge bg-primary">Vegetarian</span></li>
+                            </ul>
+                            
+                            <h5>Desserts (Choose Two)</h5>
+                            <ul>
+                                <li>Tiramisu</li>
+                                <li>Fresh Fruit Tart</li>
+                                <li>Chocolate Brownie with Vanilla Ice Cream</li>
+                                <li>Seasonal Berry Parfait <span class="badge bg-warning text-dark">GF</span></li>
+                            </ul>
+                            
+                            <div class="mt-4">
+                                <p><small>All menus include coffee, tea, and water service. Bar service available at additional cost.</small></p>
+                                <p><small>Menu items may vary based on seasonal availability. Minimum 15 guests required.</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Mediterranean Coastal Menu -->
+                <section id="mediterranean-coastal" class="py-5" data-aos="fade-up">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid rounded shadow" alt="Mediterranean Coastal Menu">
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="p-4">
+                                <h3 class="display-6 mb-3">Mediterranean Coastal Menu</h3>
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="badge bg-info text-dark me-2">Specialty</span>
+                                    <span class="text-muted">Starting at $42/person</span>
+                                </div>
+                                <p>Celebrate the flavors of the Mediterranean coast with this menu featuring Spanish, Italian, Greek, and Moroccan influences. Perfect for those seeking bold flavors and healthy options.</p>
+                                <button class="btn btn-outline-primary mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#mediterraneanItems" aria-expanded="false" aria-controls="mediterraneanItems">
+                                    View Menu Items <i class="fas fa-chevron-down ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Collapsible Menu Items -->
+                    <div class="collapse mt-4" id="mediterraneanItems">
+                        <div class="card card-body">
+                            <h4 class="mb-4">Menu Details</h4>
+                            
+                            <h5>Mezze & Tapas (Choose Four)</h5>
+                            <ul class="mb-4">
+                                <li>Hummus with Warm Pita <span class="badge bg-primary">Vegetarian</span></li>
+                                <li>Spanakopita Triangles <span class="badge bg-primary">Vegetarian</span></li>
+                                <li>Stuffed Grape Leaves <span class="badge bg-primary">Vegetarian</span> <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Grilled Halloumi Cheese <span class="badge bg-primary">Vegetarian</span> <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Patatas Bravas <span class="badge bg-primary">Vegetarian</span> <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Gambas al Ajillo (Garlic Shrimp) <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Marinated Olives <span class="badge bg-success">Vegan</span> <span class="badge bg-warning text-dark">GF</span></li>
+                            </ul>
+                            
+                            <h5>Entrées (Choose Two)</h5>
+                            <ul class="mb-4">
+                                <li>Grilled Branzino with Herb Oil and Lemon <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Moroccan Tagine with Chicken and Preserved Lemon <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Seafood Cioppino</li>
+                                <li>Grilled Lamb Chops with Rosemary and Garlic <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Vegetable Paella <span class="badge bg-success">Vegan</span> <span class="badge bg-warning text-dark">GF</span></li>
+                            </ul>
+                            
+                            <h5>Sides (Choose Three)</h5>
+                            <ul class="mb-4">
+                                <li>Greek Salad <span class="badge bg-primary">Vegetarian</span> <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Roasted Vegetables with Za'atar <span class="badge bg-success">Vegan</span> <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Lemon Rice Pilaf <span class="badge bg-primary">Vegetarian</span> <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Couscous with Dried Fruits and Nuts <span class="badge bg-primary">Vegetarian</span></li>
+                                <li>Rosemary Focaccia <span class="badge bg-primary">Vegetarian</span></li>
+                            </ul>
+                            
+                            <h5>Desserts (Choose Two)</h5>
+                            <ul>
+                                <li>Baklava</li>
+                                <li>Panna Cotta with Berry Compote <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Orange Almond Cake <span class="badge bg-warning text-dark">GF</span></li>
+                                <li>Fresh Fruit Platter with Honey Yogurt Dip <span class="badge bg-primary">Vegetarian</span> <span class="badge bg-warning text-dark">GF</span></li>
+                            </ul>
+                            
+                            <div class="mt-4">
+                                <p><small>All menus include coffee, tea, and water service. Bar service available at additional cost.</small></p>
+                                <p><small>Menu items may vary based on seasonal availability. Minimum 15 guests required.</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Specialty Stations & Add-Ons -->
+                <section id="specialty-stations" class="py-5" data-aos="fade-up">
+                    <div class="p-5 rounded" style="background-color: var(--light-blue);">
+                        <h3 class="display-6 mb-4 text-center">Specialty Stations & Add-Ons</h3>
+                        <p class="text-center mb-5">Enhance your event with these interactive food stations and special add-ons</p>
+                        
+                        <div class="row g-4">
+                            <!-- Raw Bar Station -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Raw Bar</h4>
+                                        <p class="text-muted">$18/person</p>
+                                        <p class="card-text">Fresh oysters, shrimp, clams, and ceviche served with traditional accompaniments and house-made sauces.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Carving Station -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Carving Station</h4>
+                                        <p class="text-muted">$15/person</p>
+                                        <p class="card-text">Choice of roasted prime rib, herb-crusted tenderloin, or glazed ham carved to order with accompanying sauces and rolls.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Pasta Station -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Pasta Station</h4>
+                                        <p class="text-muted">$12/person</p>
+                                        <p class="card-text">Made-to-order pasta with choice of sauces, seafood, meats, and vegetables, prepared by our chefs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Dessert Station -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Dessert Bar</h4>
+                                        <p class="text-muted">$10/person</p>
+                                        <p class="card-text">Assortment of mini desserts, chocolate fondue with dippables, and seasonal fruit display.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Artisanal Cheese & Charcuterie -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Artisanal Cheese & Charcuterie</h4>
+                                        <p class="text-muted">$12/person</p>
+                                        <p class="card-text">Selection of fine cheeses, cured meats, crackers, breads, and accompaniments.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Champagne & Oyster Bar -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Champagne & Oyster Bar</h4>
+                                        <p class="text-muted">$22/person</p>
+                                        <p class="card-text">Premium oyster selection with champagne pairings and classic mignonette sauces.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Other tabs content would go here - not showing all of them for brevity -->
+            <div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="seafood-tab">
+                <!-- Seafood menu items would go here -->
+                <div class="text-center py-5">
+                    <p class="text-muted">Switch to the "All Menus" tab to view our complete offerings including seafood options.</p>
+                </div>
+            </div>
+            
+            <div class="tab-pane fade" id="appetizers" role="tabpanel" aria-labelledby="appetizers-tab">
+                <!-- Appetizer menu items would go here -->
+                <div class="text-center py-5">
+                    <p class="text-muted">Switch to the "All Menus" tab to view our complete offerings including appetizer options.</p>
+                </div>
+            </div>
+            
+            <div class="tab-pane fade" id="entrees" role="tabpanel" aria-labelledby="entrees-tab">
+                <!-- Entree menu items would go here -->
+                <div class="text-center py-5">
+                    <p class="text-muted">Switch to the "All Menus" tab to view our complete offerings including entrée options.</p>
+                </div>
+            </div>
+            
+            <div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="desserts-tab">
+                <!-- Dessert menu items would go here -->
+                <div class="text-center py-5">
+                    <p class="text-muted">Switch to the "All Menus" tab to view our complete offerings including dessert options.</p>
+                </div>
+            </div>
+            
+            <div class="tab-pane fade" id="beverages" role="tabpanel" aria-labelledby="beverages-tab">
+                <!-- Beverage menu items would go here -->
+                <div class="text-center py-5">
+                    <p class="text-muted">Switch to the "All Menus" tab to view our complete offerings including beverage options.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Special Dietary Needs Section -->
+        <section class="py-5 my-5 p-5 rounded" style="background-color: var(--sand);" data-aos="fade-up">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h3 class="display-6 mb-4">Special Dietary Accommodations</h3>
+                    <p class="lead mb-4">We are committed to accommodating all dietary needs and preferences.</p>
+                    <p>Our culinary team can adapt any menu for allergies, intolerances, or dietary restrictions including gluten-free, dairy-free, vegan, and more. Please let us know your specific requirements when planning your event.</p>
+                    <a href="contact.html" class="btn btn-primary mt-3">Contact Us About Dietary Needs</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seasonal Specials -->
+        <section class="py-5" data-aos="fade-up">
+            <h3 class="display-6 text-center mb-5">Seasonal Specials</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Spring/Summer Highlights</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <i class="fas fa-leaf text-primary me-2"></i>
+                                    <strong>Summer Berry Salad</strong> - Mixed greens, seasonal berries, candied pecans, and goat cheese with citrus vinaigrette
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-leaf text-primary me-2"></i>
+                                    <strong>Chilled Gazpacho</strong> - Fresh tomato and cucumber soup with herb oil
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-leaf text-primary me-2"></i>
+                                    <strong>Grilled Peach & Prosciutto</strong> - With burrata and balsamic glaze
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-leaf text-primary me-2"></i>
+                                    <strong>Herb-Crusted Halibut</strong> - With spring pea puree and lemon-butter sauce
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Fall/Winter Highlights</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <i class="fas fa-snowflake text-primary me-2"></i>
+                                    <strong>Butternut Squash Soup</strong> - With spiced crème fraîche and toasted pepitas
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-snowflake text-primary me-2"></i>
+                                    <strong>Harvest Salad</strong> - Mixed greens, roasted vegetables, dried cranberries, and maple vinaigrette
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-snowflake text-primary me-2"></i>
+                                    <strong>Braised Short Ribs</strong> - With parsnip puree and red wine reduction
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-snowflake text-primary me-2"></i>
+                                    <strong>Spiced Apple Crisp</strong> - With vanilla bean ice cream and caramel sauce
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center py-5" data-aos="fade-up">
+            <h3 class="display-6 mb-4">Ready to Plan Your Menu?</h3>
+            <p class="lead">Contact us to discuss customizing a menu for your next event.</p>
+            <div class="mt-4">
+                <a href="contact.html" class="btn btn-primary btn-lg me-2 mb-2">Contact Us</a>
+                <a href="#" class="btn btn-outline-primary btn-lg mb-2" data-bs-toggle="modal" data-bs-target="#tasting-modal">Schedule a Tasting</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Tasting Modal -->
+    <div class="modal fade" id="tasting-modal" tabindex="-1" aria-labelledby="tastingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tastingModalLabel">Schedule a Menu Tasting</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Experience our coastal cuisine firsthand. Menu tastings are available for confirmed events or for a nominal fee that will be applied to your final bill if you book with us.</p>
+                    <p>Please contact us at (555) 123-4567 or fill out our contact form to arrange a tasting session.</p>
+                    <div class="text-center mt-4">
+                        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <!-- About Column -->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Festive Coastal Cuisine</h5>
+                    <p class="mt-3">Exceptional catering services inspired by coastal flavors for weddings, corporate events, and special occasions.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Quick Links</h5>
+                    <ul class="nav flex-column mt-3">
+                        <li class="nav-item"><a href="index.html" class="nav-link ps-0 text-white">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link ps-0 text-white">About Us</a></li>
+                        <li class="nav-item"><a href="menus.html" class="nav-link ps-0 text-white">Menus</a></li>
+                        <li class="nav-item"><a href="events.html" class="nav-link ps-0 text-white">Events</a></li>
+                        <li class="nav-item"><a href="gallery.html" class="nav-link ps-0 text-white">Gallery</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link ps-0 text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact & Newsletter -->
+                <div class="col-lg-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>123 Coastal Drive, Oceanview, CA 90210</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>(555) 123-4567</li>
+                        <li class="mb-4"><i class="fas fa-envelope me-2"></i>info@festivecoastal.com</li>
+                    </ul>
+                    
+                    <h5>Newsletter</h5>
+                    <p class="small mt-2">Subscribe to receive updates on special menus and events.</p>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="designer-credit">
+                        <span class="d-inline-block py-2 px-3 rounded" style="border: 1px solid rgba(255,255,255,0.2); font-family: 'Playfair Display', serif; letter-spacing: 1px;">
+                            Website Designed by MikeZA
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">&copy; 2025 Festive Coastal Cuisine Catering. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small mb-0">
+                        <a href="#" class="text-white-50 text-decoration-none me-3">Privacy Policy</a>
+                        <a href="#" class="text-white-50 text-decoration-none">Terms of Service</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS - Animate On Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- LottieFiles Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
+    <!-- Initialize Scripts -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    
+    <!-- Dark Mode Script -->
+    <script src="js/dark-mode.js"></script>
+    
+    <!-- Lottie Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create left coastal animation (seafood related)
+            const leftAnimationContainer = document.getElementById('leftCoastalAnimation');
+            
+            // Create a Lottie player for seafood animation
+            const leftAnimationPlayer = document.createElement('lottie-player');
+            // Seafood/fish animation
+            leftAnimationPlayer.src = 'https://assets5.lottiefiles.com/packages/lf20_uwR49z.json';
+            leftAnimationPlayer.background = 'transparent';
+            leftAnimationPlayer.speed = '1';
+            leftAnimationPlayer.style.width = '40px';
+            leftAnimationPlayer.style.height = '40px';
+            leftAnimationPlayer.loop = true;
+            leftAnimationPlayer.autoplay = true;
+            
+            leftAnimationContainer.appendChild(leftAnimationPlayer);
+            
+            // Create right coastal animation (cooking related)
+            const rightAnimationContainer = document.getElementById('rightCoastalAnimation');
+            
+            // Create a Lottie player for cooking animation
+            const rightAnimationPlayer = document.createElement('lottie-player');
+            // Chef hat animation
+            rightAnimationPlayer.src = 'https://assets1.lottiefiles.com/packages/lf20_yjrdpceb.json';
+            rightAnimationPlayer.background = 'transparent';
+            rightAnimationPlayer.speed = '1';
+            rightAnimationPlayer.style.width = '40px';
+            rightAnimationPlayer.style.height = '40px';
+            rightAnimationPlayer.loop = true;
+            rightAnimationPlayer.autoplay = true;
+            
+            rightAnimationContainer.appendChild(rightAnimationPlayer);
+        });
+    </script>
+</body>
+</html>

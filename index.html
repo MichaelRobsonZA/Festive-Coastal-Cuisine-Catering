@@ -27,8 +27,9 @@
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <div class="d-flex align-items-center">
-                    <div id="coastalAnimation" class="me-2"></div>
+                    <div id="leftCoastalAnimation" class="me-2"></div>
                     Festive Coastal Cuisine
+                    <div id="rightCoastalAnimation" class="ms-2"></div>
                 </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +38,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
@@ -85,7 +86,7 @@
         <section id="about" class="py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-                    <img src="images/chefs-coastal-cuisine.jpg" class="img-fluid rounded shadow" alt="Chefs preparing coastal cuisine">
+                    <img src="https://images.pexels.com/photos/3338675/pexels-photo-3338675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid rounded shadow" alt="Chefs preparing coastal cuisine">
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <h3 class="display-6 mb-4">About Us</h3>
@@ -104,7 +105,7 @@
                 <!-- Seafood Elegance Menu -->
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="0">
                     <div class="card h-100 shadow">
-                        <img src="images/seafood-elegance.jpg" class="card-img-top" alt="Seafood platter">
+                        <img src="https://images.pexels.com/photos/566345/pexels-photo-566345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Seafood platter">
                         <div class="card-body">
                             <h4 class="card-title">Seafood Elegance</h4>
                             <p class="card-text">A premium selection of fresh seafood including lobster, crab, oysters, and grilled fish served with seasonal vegetables and artisan breads.</p>
@@ -119,7 +120,7 @@
                 <!-- Coastal Celebration Menu -->
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="card h-100 shadow">
-                        <img src="images/coastal-celebration.jpg" class="card-img-top" alt="Coastal cuisine setup">
+                        <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Coastal cuisine setup">
                         <div class="card-body">
                             <h4 class="card-title">Coastal Celebration</h4>
                             <p class="card-text">Our most popular menu featuring a balanced mix of land and sea dishes. Perfect for weddings and milestone celebrations.</p>
@@ -134,7 +135,7 @@
                 <!-- Mediterranean Coastal Menu -->
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="card h-100 shadow">
-                        <img src="images/mediterranean-coastal.jpg" class="card-img-top" alt="Mediterranean dishes">
+                        <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Mediterranean dishes">
                         <div class="card-body">
                             <h4 class="card-title">Mediterranean Coastal</h4>
                             <p class="card-text">Inspired by the Mediterranean coastline, featuring tapas, paella, grilled vegetables, and fresh seafood with olive oil and herbs.</p>
@@ -344,6 +345,17 @@
             
             <hr class="my-4">
             
+            <!-- Add this designer attribution to all HTML files just before closing the footer tag -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="designer-credit">
+                        <span class="d-inline-block py-2 px-3 rounded" style="border: 1px solid rgba(255,255,255,0.2); font-family: 'Playfair Display', serif; letter-spacing: 1px;">
+                            Website Designed by MikeZA
+                        </span>
+                    </p>
+                </div>
+            </div>
+
             <!-- Copyright -->
             <div class="row">
                 <div class="col-md-6 text-center text-md-start">
@@ -384,21 +396,37 @@
     <!-- Lottie Animation Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Create a coastal animation
-            const coastalAnimationContainer = document.getElementById('coastalAnimation');
+            // Create left coastal animation (seafood related)
+            const leftAnimationContainer = document.getElementById('leftCoastalAnimation');
             
-            // Create a Lottie player for a wave or shell animation
-            const animationPlayer = document.createElement('lottie-player');
-            // Use a different animation URL that works (public wave animation)
-            animationPlayer.src = 'https://assets2.lottiefiles.com/packages/lf20_twxv8mn3.json';
-            animationPlayer.background = 'transparent';
-            animationPlayer.speed = '1';
-            animationPlayer.style.width = '40px';
-            animationPlayer.style.height = '40px';
-            animationPlayer.loop = true;
-            animationPlayer.autoplay = true;
+            // Create a Lottie player for seafood animation
+            const leftAnimationPlayer = document.createElement('lottie-player');
+            // Seafood/fish animation
+            leftAnimationPlayer.src = 'https://assets5.lottiefiles.com/packages/lf20_uwR49z.json';
+            leftAnimationPlayer.background = 'transparent';
+            leftAnimationPlayer.speed = '1';
+            leftAnimationPlayer.style.width = '40px';
+            leftAnimationPlayer.style.height = '40px';
+            leftAnimationPlayer.loop = true;
+            leftAnimationPlayer.autoplay = true;
             
-            coastalAnimationContainer.appendChild(animationPlayer);
+            leftAnimationContainer.appendChild(leftAnimationPlayer);
+            
+            // Create right coastal animation (cooking related)
+            const rightAnimationContainer = document.getElementById('rightCoastalAnimation');
+            
+            // Create a Lottie player for cooking animation
+            const rightAnimationPlayer = document.createElement('lottie-player');
+            // Chef hat animation
+            rightAnimationPlayer.src = 'https://assets1.lottiefiles.com/packages/lf20_yjrdpceb.json';
+            rightAnimationPlayer.background = 'transparent';
+            rightAnimationPlayer.speed = '1';
+            rightAnimationPlayer.style.width = '40px';
+            rightAnimationPlayer.style.height = '40px';
+            rightAnimationPlayer.loop = true;
+            rightAnimationPlayer.autoplay = true;
+            
+            rightAnimationContainer.appendChild(rightAnimationPlayer);
         });
     </script>
 </body>

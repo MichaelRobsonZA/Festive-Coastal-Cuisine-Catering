@@ -74,11 +74,20 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.2rem;
 }
 
-/* Card styling */
+/* Updated card styling for better readability in both modes */
 .card {
-  background-color: var(--card-bg);
+  background-color: white;
   border-color: var(--border-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-title {
+  color: var(--dark-navy);
+  font-weight: 600;
+}
+
+.card-text {
+  color: #333333;
 }
 
 .card:hover {
@@ -87,12 +96,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card .text-muted {
-  color: var(--text-color) !important;
-  opacity: 0.8;
+  color: #555555 !important;
 }
 
-.card-title, .card-text {
-  color: var(--text-color);
+/* Dark mode overrides for cards */
+[data-theme="dark"] .card {
+  background-color: #2d2d2d;
+}
+
+[data-theme="dark"] .card-title,
+[data-theme="dark"] .card-text,
+[data-theme="dark"] .card .text-muted {
+  color: #e0e0e0 !important;
 }
 
 /* Events section styling */
@@ -175,6 +190,24 @@ footer .social-icons a:hover {
   margin-bottom: 2rem;
 }
 
+/* Featured Menus section styling - improve text visibility */
+#featured-menus .card {
+  background-color: white;
+}
+
+#featured-menus .card-title {
+  color: var(--dark-navy);
+}
+
+#featured-menus .card-text {
+  color: var(--dark-navy);
+}
+
+#featured-menus .text-muted {
+  color: var(--dark-navy) !important;
+  opacity: 0.8;
+}
+
 /* Events We Cater section styling */
 #events-we-cater {
   background-color: var(--sand);
@@ -186,4 +219,267 @@ footer .social-icons a:hover {
 #events-we-cater h3 {
   color: var(--dark-navy);
   margin-bottom: 2rem;
+}
+
+/* Events We Cater section styling - improve text visibility */
+#events-we-cater .card {
+  background-color: white;
+}
+
+#events-we-cater .card-title {
+  color: var(--dark-navy);
+}
+
+#events-we-cater .card-text {
+  color: var(--dark-navy);
+}
+
+/* Team cards styling - improve text visibility */
+.team-card {
+  background-color: white;
+}
+
+.team-card .card-title {
+  color: var(--dark-navy);
+}
+
+.team-card .card-text {
+  color: var(--dark-navy);
+}
+
+/* Dark mode overrides for cards */
+[data-theme="dark"] #featured-menus .card,
+[data-theme="dark"] #events-we-cater .card,
+[data-theme="dark"] .team-card {
+  background-color: var(--card-bg);
+}
+
+[data-theme="dark"] #featured-menus .card-title,
+[data-theme="dark"] #events-we-cater .card-title,
+[data-theme="dark"] .team-card .card-title {
+  color: #ffffff;
+}
+
+[data-theme="dark"] #featured-menus .card-text,
+[data-theme="dark"] #events-we-cater .card-text,
+[data-theme="dark"] .team-card .card-text,
+[data-theme="dark"] #featured-menus .text-muted {
+  color: #e0e0e0 !important;
+}
+
+/* Special section styling */
+#values.bg-light {
+  background-color: var(--light-blue) !important;
+}
+
+[data-theme="dark"] #values.bg-light {
+  background-color: var(--dark-navy) !important;
+}
+
+/* Fix text in light sections */
+.bg-light {
+  color: #333333;
+}
+
+[data-theme="dark"] .bg-light {
+  color: #e0e0e0;
+}
+
+/* Fix for Events page "Our Catering Process" cards */
+#our-process .process-step {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+#our-process .process-step:hover {
+  transform: translateY(-5px);
+}
+
+#our-process .process-step h4 {
+  color: var(--dark-navy);
+  margin-top: 1rem;
+}
+
+#our-process .process-step p {
+  color: #333333;
+}
+
+/* Fix for Contact page "Contact Information" section */
+.contact-info {
+  background-color: white !important;
+  border-radius: 8px;
+  padding: 2rem !important;
+  height: 100%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.contact-info h3,
+.contact-info h5 {
+  color: var(--dark-navy);
+}
+
+.contact-info p {
+  color: #333333;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] #our-process .process-step,
+[data-theme="dark"] .contact-info {
+  background-color: var(--card-bg) !important;
+}
+
+[data-theme="dark"] #our-process .process-step h4,
+[data-theme="dark"] .contact-info h3,
+[data-theme="dark"] .contact-info h5 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] #our-process .process-step p,
+[data-theme="dark"] .contact-info p {
+  color: #e0e0e0;
+}
+
+/* Remove bg-light class from contact-info div */
+/* This needs to be updated in the HTML file */
+
+/* Styling for Our Catering Process section */
+#our-process {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+#our-process h3 {
+  color: white;
+}
+
+#our-process .process-step {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+#our-process .process-step:hover {
+  transform: translateY(-5px);
+}
+
+#our-process .process-step h4 {
+  color: white;
+  margin-top: 1rem;
+}
+
+#our-process .process-step p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#our-process .process-icon i {
+  color: white;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] #our-process {
+  background-color: var(--dark-navy);
+}
+
+[data-theme="dark"] #our-process .process-step {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Fix for text-muted class across the site - especially on the menus page */
+.text-muted {
+  color: #555555 !important;
+  font-weight: 500;
+}
+
+/* Menu page specific pricing text */
+#seafood-elegance .text-muted,
+#coastal-celebration .text-muted,
+#mediterranean-coastal .text-muted,
+#specialty-stations .text-muted,
+.card-body .text-muted {
+  color: #333333 !important;
+  font-weight: 500;
+}
+
+/* Tab content placeholders */
+.tab-pane .text-muted {
+  color: #555555 !important;
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] .text-muted {
+  color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] #seafood-elegance .text-muted,
+[data-theme="dark"] #coastal-celebration .text-muted,
+[data-theme="dark"] #mediterranean-coastal .text-muted,
+[data-theme="dark"] #specialty-stations .text-muted,
+[data-theme="dark"] .card-body .text-muted {
+  color: #e0e0e0 !important;
+}
+
+/* Additional styling for menu details (if needed) */
+.card-body h4, 
+.card-body h5 {
+  color: var(--dark-navy);
+}
+
+[data-theme="dark"] .card-body h4,
+[data-theme="dark"] .card-body h5 {
+  color: white;
+}
+
+/* Additional menu-specific styles to ensure consistency */
+.menu-tabs .nav-pills .nav-link {
+  color: var(--dark-navy);
+  background-color: transparent;
+  border: 1px solid var(--primary-blue);
+  margin: 0 5px;
+}
+
+.menu-tabs .nav-pills .nav-link:hover {
+  background-color: rgba(53, 148, 179, 0.1);
+}
+
+.menu-tabs .nav-pills .nav-link.active {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+[data-theme="dark"] .menu-tabs .nav-pills .nav-link {
+  color: #e0e0e0;
+  border-color: var(--primary-blue);
+}
+
+[data-theme="dark"] .menu-tabs .nav-pills .nav-link:hover {
+  background-color: rgba(53, 148, 179, 0.2);
+}
+
+/* Fix for badges in menus */
+.badge {
+  font-weight: 500;
+}
+
+[data-theme="dark"] .badge.bg-primary,
+[data-theme="dark"] .badge.bg-success,
+[data-theme="dark"] .badge.bg-info,
+[data-theme="dark"] .badge.bg-warning {
+  color: #ffffff !important;
+}
+
+/* Fix for any border inconsistencies */
+.rounded {
+  border-radius: 8px !important;
+}
+
+/* Consistent section spacing */
+section {
+  margin-bottom: 3rem;
 }

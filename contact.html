@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Festive Coastal Cuisine Catering</title>
+    <meta name="description" content="Get in touch with Festive Coastal Cuisine Catering to plan your event or inquire about our services. We're here to make your next celebration extraordinary.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- AOS - Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Make sure all pages have this complete navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="d-flex align-items-center">
+                    <div id="leftCoastalAnimation" class="me-2"></div>
+                    Festive Coastal Cuisine
+                    <div id="rightCoastalAnimation" class="ms-2"></div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menus.html">Menus</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <div id="darkModeToggle" class="dark-mode-toggle nav-link">
+                            <i id="moonIcon" class="fas fa-moon"></i>
+                            <i id="sunIcon" class="fas fa-sun d-none"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.pexels.com/photos/887751/pexels-photo-887751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center; background-size: cover;">
+        <div class="container text-center text-white py-5">
+            <h1 class="display-3 fw-bold" data-aos="fade-up">Contact Us</h1>
+            <p class="lead fs-4 mt-3" data-aos="fade-up" data-aos-delay="200">Let's discuss how we can make your next event extraordinary</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-lg-8 mb-5 mb-lg-0" data-aos="fade-up">
+                <h2 class="display-5 mb-4">Get in Touch</h2>
+                <p class="mb-4">Fill out the form below, and our team will get back to you within 24 hours to discuss your event needs.</p>
+                
+                <form id="contactForm" class="needs-validation" novalidate>
+                    <div class="row g-3">
+                        <!-- Name Field -->
+                        <div class="col-md-6">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                            <div class="invalid-feedback">
+                                Please provide your name.
+                            </div>
+                        </div>
+                        
+                        <!-- Email Field -->
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid email.
+                            </div>
+                        </div>
+                        
+                        <!-- Phone Field -->
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="phone">
+                        </div>
+                        
+                        <!-- Event Type Field -->
+                        <div class="col-md-6">
+                            <label for="eventType" class="form-label">Event Type</label>
+                            <select class="form-select" id="eventType" required>
+                                <option value="" selected disabled>Select an event type</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="private">Private Party</option>
+                                <option value="special">Special Occasion</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select an event type.
+                            </div>
+                        </div>
+                        
+                        <!-- Event Date Field -->
+                        <div class="col-md-6">
+                            <label for="eventDate" class="form-label">Event Date</label>
+                            <input type="date" class="form-control" id="eventDate">
+                        </div>
+                        
+                        <!-- Guest Count Field -->
+                        <div class="col-md-6">
+                            <label for="guestCount" class="form-label">Number of Guests</label>
+                            <input type="number" class="form-control" id="guestCount" min="1">
+                        </div>
+                        
+                        <!-- Message Field -->
+                        <div class="col-12">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                            <div class="invalid-feedback">
+                                Please provide details about your event.
+                            </div>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="col-12 mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="contact-info bg-light rounded p-4 h-100">
+                    <h3 class="mb-4">Contact Information</h3>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-primary fa-2x me-3"></i>
+                        </div>
+                        <div>
+                            <h5>Address</h5>
+                            <p class="mb-0">123 Coastal Drive<br>Oceanview, CA 90210</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-phone-alt text-primary fa-2x me-3"></i>
+                        </div>
+                        <div>
+                            <h5>Phone</h5>
+                            <p class="mb-0">(555) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-envelope text-primary fa-2x me-3"></i>
+                        </div>
+                        <div>
+                            <h5>Email</h5>
+                            <p class="mb-0">info@festivecoastal.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-clock text-primary fa-2x me-3"></i>
+                        </div>
+                        <div>
+                            <h5>Business Hours</h5>
+                            <p class="mb-0">Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday: 10:00 AM - 2:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-icons mt-5">
+                        <a href="#" class="text-primary me-3"><i class="fab fa-facebook-f fa-2x"></i></a>
+                        <a href="#" class="text-primary me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-primary me-3"><i class="fab fa-pinterest fa-2x"></i></a>
+                        <a href="#" class="text-primary"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Location Map -->
+        <div class="row mt-5">
+            <div class="col-12" data-aos="fade-up">
+                <h3 class="display-6 mb-4">Our Location</h3>
+                <div class="map-container rounded shadow">
+                    <!-- Responsive iframe for Google Maps -->
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13004069.896900944!2d-104.65616153260253!3d37.27865358917028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950b0b7da97427%3A0x1c36b9e6f6d18591!2sOregon!5e0!3m2!1sen!2sus!4v1647794231185!5m2!1sen!2sus" 
+                                allowfullscreen="" loading="lazy" class="rounded"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ Section -->
+        <section id="contact-faq" class="py-5 mt-5" data-aos="fade-up">
+            <h3 class="display-6 text-center mb-5">Frequently Asked Questions</h3>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="accordion" id="contactFAQ">
+                        <!-- FAQ Item 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How quickly can I expect a response after submitting my inquiry?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#contactFAQ">
+                                <div class="accordion-body">
+                                    We strive to respond to all inquiries within 24 business hours. For urgent matters or last-minute bookings, we recommend calling our office directly.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Do you offer tastings before booking?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#contactFAQ">
+                                <div class="accordion-body">
+                                    Yes, we offer menu tastings for wedding and large event clients after an initial consultation. Tastings are complimentary for confirmed bookings and have a nominal fee for preliminary tastings.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    What is your service area?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#contactFAQ">
+                                <div class="accordion-body">
+                                    We primarily serve the greater Oceanview area and surrounding counties. We can travel up to 100 miles for larger events, with additional travel fees applying beyond our standard service area.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    What information should I have ready when contacting you?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#contactFAQ">
+                                <div class="accordion-body">
+                                    It helps to have your event date, approximate guest count, event location, and any specific menu preferences or dietary restrictions. Don't worry if you don't have all the details finalized—we're here to help guide you through the planning process.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <!-- About Column -->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Festive Coastal Cuisine</h5>
+                    <p class="mt-3">Exceptional catering services inspired by coastal flavors for weddings, corporate events, and special occasions.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Quick Links</h5>
+                    <ul class="nav flex-column mt-3">
+                        <li class="nav-item"><a href="index.html" class="nav-link ps-0 text-white">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link ps-0 text-white">About Us</a></li>
+                        <li class="nav-item"><a href="menus.html" class="nav-link ps-0 text-white">Menus</a></li>
+                        <li class="nav-item"><a href="events.html" class="nav-link ps-0 text-white">Events</a></li>
+                        <li class="nav-item"><a href="gallery.html" class="nav-link ps-0 text-white">Gallery</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link ps-0 text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact & Newsletter -->
+                <div class="col-lg-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>123 Coastal Drive, Oceanview, CA 90210</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>(555) 123-4567</li>
+                        <li class="mb-4"><i class="fas fa-envelope me-2"></i>info@festivecoastal.com</li>
+                    </ul>
+                    
+                    <h5>Newsletter</h5>
+                    <p class="small mt-2">Subscribe to receive updates on special menus and events.</p>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <!-- Designer Attribution -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="designer-credit">
+                        <span class="d-inline-block py-2 px-3 rounded" style="border: 1px solid rgba(255,255,255,0.2); font-family: 'Playfair Display', serif; letter-spacing: 1px;">
+                            Website Designed by MikeZA
+                        </span>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">&copy; 2025 Festive Coastal Cuisine Catering. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small mb-0">
+                        <a href="#" class="text-white-50 text-decoration-none me-3">Privacy Policy</a>
+                        <a href="#" class="text-white-50 text-decoration-none">Terms of Service</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS - Animate On Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- LottieFiles Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
+    <!-- Initialize Scripts -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    
+    <!-- Dark Mode Script -->
+    <script src="js/dark-mode.js"></script>
+    
+    <!-- Lottie Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create left coastal animation (seafood related)
+            const leftAnimationContainer = document.getElementById('leftCoastalAnimation');
+            
+            // Create a Lottie player for seafood animation
+            const leftAnimationPlayer = document.createElement('lottie-player');
+            // Seafood/fish animation
+            leftAnimationPlayer.src = 'https://assets5.lottiefiles.com/packages/lf20_uwR49z.json';
+            leftAnimationPlayer.background = 'transparent';
+            leftAnimationPlayer.speed = '1';
+            leftAnimationPlayer.style.width = '40px';
+            leftAnimationPlayer.style.height = '40px';
+            leftAnimationPlayer.loop = true;
+            leftAnimationPlayer.autoplay = true;
+            
+            leftAnimationContainer.appendChild(leftAnimationPlayer);
+            
+            // Create right coastal animation (cooking related)
+            const rightAnimationContainer = document.getElementById('rightCoastalAnimation');
+            
+            // Create a Lottie player for cooking animation
+            const rightAnimationPlayer = document.createElement('lottie-player');
+            // Chef hat animation
+            rightAnimationPlayer.src = 'https://assets1.lottiefiles.com/packages/lf20_yjrdpceb.json';
+            rightAnimationPlayer.background = 'transparent';
+            rightAnimationPlayer.speed = '1';
+            rightAnimationPlayer.style.width = '40px';
+            rightAnimationPlayer.style.height = '40px';
+            rightAnimationPlayer.loop = true;
+            rightAnimationPlayer.autoplay = true;
+            
+            rightAnimationContainer.appendChild(rightAnimationPlayer);
+        });
+    </script>
+    
+    <!-- Form Validation Script -->
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        } else {
+                            event.preventDefault()
+                            alert('Thank you for your message! We will be in touch shortly.')
+                            form.reset()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+</body>
+</html>
