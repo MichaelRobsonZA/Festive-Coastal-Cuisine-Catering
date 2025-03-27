@@ -27,10 +27,14 @@
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 Festive Coastal Cuisine
+                <span id="leftCoastalAnimation" class="d-inline-block mx-1"></span>
+                <span id="rightCoastalAnimation" class="d-inline-block mx-1"></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -82,13 +86,12 @@
         <section id="about" class="py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-                    <img src="https://images.pexels.com/photos/3338675/pexels-photo-3338675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid rounded shadow" alt="Chefs preparing coastal cuisine">
+                    <img src="https://images.pexels.com/photos/2291367/pexels-photo-2291367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid rounded shadow" alt="Our Catering Team">
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <h3 class="display-6 mb-4">About Us</h3>
-                    <p class="lead">Bringing the fresh flavors of the coast to your special events.</p>
-                    <p>At Festive Coastal Cuisine Catering, we combine the bounty of the sea with locally-sourced ingredients to create memorable dining experiences. Founded in 2015 by Chef Maria Coastal, our team of culinary experts is dedicated to providing exceptional food and service for any occasion.</p>
-                    <p>Our philosophy is simple: use the freshest ingredients, prepare them with care, and serve them with style. Whether you're planning an intimate gathering or a grand celebration, we bring the coastal experience to you.</p>
+                    <h3 class="display-6 mb-4">Our Story</h3>
+                    <p>Festive Coastal Cuisine Catering was born from a passion for exceptional seafood and a love for creating memorable experiences. Our team of culinary experts brings years of experience in coastal cuisine, combining traditional recipes with innovative techniques.</p>
+                    <p>We're committed to using the freshest ingredients, sourced locally whenever possible, to create stunning dishes that delight the senses.</p>
                     <a href="about.html" class="btn btn-outline-primary mt-3">Learn More About Us</a>
                 </div>
             </div>
@@ -98,53 +101,48 @@
         <section id="featured-menus" class="py-5">
             <h3 class="display-6 text-center mb-5" data-aos="fade-up">Our Featured Menus</h3>
             <div class="row">
-                <!-- Seafood Elegance Menu -->
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="col-md-4 mb-4" data-aos="fade-up">
                     <div class="card h-100 shadow">
-                        <img src="https://images.pexels.com/photos/566345/pexels-photo-566345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Seafood platter">
+                        <img src="https://images.pexels.com/photos/566345/pexels-photo-566345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Seafood Elegance Menu">
                         <div class="card-body">
                             <h4 class="card-title">Seafood Elegance</h4>
-                            <p class="card-text">A premium selection of fresh seafood including lobster, crab, oysters, and grilled fish served with seasonal vegetables and artisan breads.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <span class="text-muted">Starting at $65/person</span>
-                                <a href="menus.html#seafood-elegance" class="btn btn-primary">View Menu</a>
-                            </div>
+                            <p class="card-text">Our premium seafood selection featuring lobster, crab, and seasonal fish prepared with coastal-inspired flavors.</p>
+                            <p class="text-muted">Starting at $65/person</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <a href="menus.html#seafood-elegance" class="btn btn-sm btn-outline-primary">View Menu</a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Coastal Celebration Menu -->
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card h-100 shadow">
-                        <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Coastal cuisine setup">
+                        <img src="https://images.pexels.com/photos/5718071/pexels-photo-5718071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Coastal Celebration Menu">
                         <div class="card-body">
                             <h4 class="card-title">Coastal Celebration</h4>
-                            <p class="card-text">Our most popular menu featuring a balanced mix of land and sea dishes. Perfect for weddings and milestone celebrations.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <span class="text-muted">Starting at $55/person</span>
-                                <a href="menus.html#coastal-celebration" class="btn btn-primary">View Menu</a>
-                            </div>
+                            <p class="card-text">A festive selection of seafood and land favorites, perfect for weddings and special celebrations.</p>
+                            <p class="text-muted">Starting at $55/person</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <a href="menus.html#coastal-celebration" class="btn btn-sm btn-outline-primary">View Menu</a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Mediterranean Coastal Menu -->
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="card h-100 shadow">
-                        <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Mediterranean dishes">
+                        <img src="https://images.pexels.com/photos/2280545/pexels-photo-2280545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Mediterranean Coastal Menu">
                         <div class="card-body">
                             <h4 class="card-title">Mediterranean Coastal</h4>
-                            <p class="card-text">Inspired by the Mediterranean coastline, featuring tapas, paella, grilled vegetables, and fresh seafood with olive oil and herbs.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <span class="text-muted">Starting at $50/person</span>
-                                <a href="menus.html#mediterranean-coastal" class="btn btn-primary">View Menu</a>
-                            </div>
+                            <p class="card-text">Mediterranean-inspired coastal cuisine featuring fresh ingredients and bold flavors.</p>
+                            <p class="text-muted">Starting at $50/person</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <a href="menus.html#mediterranean-coastal" class="btn btn-sm btn-outline-primary">View Menu</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-4" data-aos="fade-up">
-                <a href="menus.html" class="btn btn-outline-primary btn-lg">View All Menus</a>
+                <a href="menus.html" class="btn btn-primary">View All Menus</a>
             </div>
         </section>
         
@@ -152,69 +150,40 @@
         <section id="events-we-cater" class="py-5">
             <h3 class="display-6 text-center mb-5" data-aos="fade-up">Events We Cater</h3>
             <div class="row">
-                <!-- Weddings -->
-                <div class="col-md-6 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="0">
-                    <div class="card event-card h-100 text-center">
-                        <div class="event-icon p-4">
-                            <i class="fas fa-rings-wedding fa-3x text-primary"></i>
-                            <i class="fas fa-heart fa-3x text-primary"></i>
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up">
+                    <div class="card h-100 text-center p-3 border-0 shadow-sm">
+                        <div class="event-icon mb-3">
+                            <i class="fas fa-ring fa-3x"></i>
                         </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Weddings</h4>
-                            <p class="card-text">Make your special day memorable with our exquisite coastal-inspired catering. From rehearsal dinners to receptions, we create unforgettable culinary experiences.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <a href="events.html#weddings" class="btn btn-outline-primary">Learn More</a>
-                        </div>
+                        <h5>Weddings</h5>
+                        <p class="small">Elegant catering for your special day</p>
                     </div>
                 </div>
-                
-                <!-- Corporate Events -->
-                <div class="col-md-6 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="card event-card h-100 text-center">
-                        <div class="event-icon p-4">
-                            <i class="fas fa-briefcase fa-3x text-primary"></i>
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 text-center p-3 border-0 shadow-sm">
+                        <div class="event-icon mb-3">
+                            <i class="fas fa-briefcase fa-3x"></i>
                         </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Corporate Events</h4>
-                            <p class="card-text">Impress clients and reward employees with sophisticated catering options for meetings, conferences, holiday parties and special corporate celebrations.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <a href="events.html#corporate" class="btn btn-outline-primary">Learn More</a>
-                        </div>
+                        <h5>Corporate</h5>
+                        <p class="small">Impress clients and employees</p>
                     </div>
                 </div>
-                
-                <!-- Private Parties -->
-                <div class="col-md-6 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="card event-card h-100 text-center">
-                        <div class="event-icon p-4">
-                            <i class="fas fa-glass-cheers fa-3x text-primary"></i>
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 text-center p-3 border-0 shadow-sm">
+                        <div class="event-icon mb-3">
+                            <i class="fas fa-birthday-cake fa-3x"></i>
                         </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Private Parties</h4>
-                            <p class="card-text">From intimate dinner parties to milestone birthdays, let us handle the culinary details while you focus on making memories with your guests.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <a href="events.html#private" class="btn btn-outline-primary">Learn More</a>
-                        </div>
+                        <h5>Private Parties</h5>
+                        <p class="small">Celebrate life's milestones</p>
                     </div>
                 </div>
-                
-                <!-- Special Occasions -->
-                <div class="col-md-6 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="600">
-                    <div class="card event-card h-100 text-center">
-                        <div class="event-icon p-4">
-                            <i class="fas fa-calendar-star fa-3x text-primary"></i>
-                            <i class="fas fa-calendar-check fa-3x text-primary"></i>
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 text-center p-3 border-0 shadow-sm">
+                        <div class="event-icon mb-3">
+                            <i class="fas fa-glass-cheers fa-3x"></i>
                         </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Special Occasions</h4>
-                            <p class="card-text">Celebrate life's special moments with custom menus designed for holidays, graduations, anniversaries, and other meaningful celebrations.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <a href="events.html#special" class="btn btn-outline-primary">Learn More</a>
-                        </div>
+                        <h5>Special Events</h5>
+                        <p class="small">Custom catering for any occasion</p>
                     </div>
                 </div>
             </div>
@@ -223,65 +192,47 @@
         <!-- Testimonials Section -->
         <section id="testimonials" class="py-5 rounded my-5">
             <div class="container py-4">
-                <h3 class="display-6 text-center mb-5" data-aos="fade-up">What Our Clients Say</h3>
-                
-                <div class="row testimonial-carousel">
-                    <!-- Testimonial 1 -->
-                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="0">
-                        <div class="card h-100 shadow-sm">
+                <h3 class="display-6 text-center mb-5 text-white" data-aos="fade-up">What Our Clients Say</h3>
+                <div class="row">
+                    <div class="col-md-4 mb-4" data-aos="fade-up">
+                        <div class="card h-100 border-0 shadow">
                             <div class="card-body">
-                                <div class="d-flex justify-content-center mb-3">
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://randomuser.me/api/portraits/women/32.jpg" class="rounded-circle me-3" width="60" height="60" alt="Client">
+                                    <div>
+                                        <h5 class="mb-0">Sarah Johnson</h5>
+                                        <p class="small text-muted mb-0">Wedding Client</p>
+                                    </div>
                                 </div>
-                                <p class="card-text fst-italic text-center">"The seafood was incredibly fresh, and the presentation was stunning. Our wedding guests are still talking about the food months later!"</p>
-                                <div class="text-center mt-4">
-                                    <h5 class="mb-1">Sarah & Michael</h5>
-                                    <p class="text-muted small">Wedding Reception</p>
-                                </div>
+                                <p>"The seafood was absolutely incredible! Our guests are still talking about the oyster bar and grilled lobster. The service was impeccable too."</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Testimonial 2 -->
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card h-100 border-0 shadow">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle me-3" width="60" height="60" alt="Client">
+                                    <div>
+                                        <h5 class="mb-0">Michael Thomas</h5>
+                                        <p class="small text-muted mb-0">Corporate Event</p>
+                                    </div>
+                                </div>
+                                <p>"We hired Festive Coastal Cuisine for our company's annual celebration, and they exceeded all expectations. Professional, attentive, and the food was exceptional."</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card h-100 shadow-sm">
+                        <div class="card h-100 border-0 shadow">
                             <div class="card-body">
-                                <div class="d-flex justify-content-center mb-3">
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle me-3" width="60" height="60" alt="Client">
+                                    <div>
+                                        <h5 class="mb-0">Jennifer Davis</h5>
+                                        <p class="small text-muted mb-0">Private Party</p>
+                                    </div>
                                 </div>
-                                <p class="card-text fst-italic text-center">"Festive Coastal Cuisine elevated our corporate event with their impeccable service and attention to detail. The Mediterranean menu was a hit with all our international clients."</p>
-                                <div class="text-center mt-4">
-                                    <h5 class="mb-1">James Rodriguez</h5>
-                                    <p class="text-muted small">Corporate Gala</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Testimonial 3 -->
-                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-center mb-3">
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                </div>
-                                <p class="card-text fst-italic text-center">"We hired Festive Coastal for our family reunion and they exceeded our expectations. The team was professional and accommodated our dietary restrictions without sacrificing flavor."</p>
-                                <div class="text-center mt-4">
-                                    <h5 class="mb-1">Lisa Thompson</h5>
-                                    <p class="text-muted small">Family Reunion</p>
-                                </div>
+                                <p>"From planning to execution, everything was perfect. The chef created a custom menu that incorporated all of our favorites with a coastal twist."</p>
                             </div>
                         </div>
                     </div>
@@ -341,7 +292,7 @@
             
             <hr class="my-4">
             
-            <!-- Add this designer attribution to all HTML files just before closing the footer tag -->
+            <!-- For the row with designer-credit: -->
             <div class="row mt-4">
                 <div class="col-12 text-center">
                     <p class="designer-credit">

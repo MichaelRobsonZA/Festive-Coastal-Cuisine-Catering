@@ -217,7 +217,7 @@ footer .social-icons a:hover {
 }
 
 #events-we-cater h3 {
-  color: var(--dark-navy);
+  color: var (--dark-navy);
   margin-bottom: 2rem;
 }
 
@@ -482,4 +482,28 @@ footer .social-icons a:hover {
 /* Consistent section spacing */
 section {
   margin-bottom: 3rem;
+}
+
+/* Add to the end of the file to ensure consistent spacing */
+.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+.my-5 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+/* Ensure consistent card styling */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+/* Ensure consistent button styling */
+.btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
 }
